@@ -10,7 +10,7 @@ class MlSpider(scrapy.Spider):
         for i in response.xpath('//li[@class="promotion-item"]'):
             price = i.xpath('.//span[@class="promotion-item__price"]//text()').getall()
             title = i.xpath('.//p[@class="promotion-item__title"]/text()').get()
-            link = i.xpath('.//a/href').get()
+            link = i.xpath('./a/@href').getall()
 
             yield{
                 'price' : price, 
