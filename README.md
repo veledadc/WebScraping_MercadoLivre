@@ -1,5 +1,5 @@
 # WebScraping MercadoLivre
-Nesse estudo fiz a extração de mais de 10.000 itens em oferta no site Mercado Livre, usando Python
+Nesse estudo percorro mais de 200 paginas e faço a extração de mais de 10.000 itens com nome, preço e links todos em oferta no site Mercado Livre, isso tudo usando Python
 
 ```#  install
 pip install scrapy 
@@ -39,3 +39,27 @@ class MlSpider(scrapy.Spider):
             if next_page:
                 yield scrapy.Request(url=next_page, callback=self.parse)
 ``` 
+# Use as configurações 
+```
+BOT_NAME = 'mercadolivre'
+
+SPIDER_MODULES = ['mercadolivre.spiders']
+NEWSPIDER_MODULE = 'mercadolivre.spiders'
+
+USER_AGENT = 'USER_AGENT'
+
+ROBOTSTXT_OBEY = False
+
+AUTOTHROTTLE_ENABLED = True
+
+```
+
+# Para salvar os resultados  
+```
+scrapy crawl ml -o nome_do_arquivo.csv
+
+ou
+
+scrapy crawl ml -o nome_do_arquivo.json
+
+```
