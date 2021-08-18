@@ -59,7 +59,7 @@ AUTOTHROTTLE_ENABLED = True
 
 ```
 
-# Para salvar os resultados  
+# Para rodar e salvar os resultados  
 ```
 scrapy crawl ml -o nome_do_arquivo.csv
 
