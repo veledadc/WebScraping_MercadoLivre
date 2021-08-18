@@ -1,15 +1,20 @@
 # WebScraping MercadoLivre
 Nesse estudo percorro mais de 200 paginas e faço a extração de mais de 10.000 itens com nome, preço e links todos em oferta no site Mercado Livre, isso tudo usando Python
 
-```#  install
+##  Install
+```
 pip install scrapy 
-
-# project
+```
+1. Project
+```
 scrapy startproject mercadolivre
-
-# diretorio
+```
+2. Diretorio
+```
 cd mercadolivre
-# no diretorio gerar spider
+```
+3. no diretorio gerar spider
+```
 scrapy genspider ml mercadolivre.com
 ```
 # Exemplo
