@@ -46,7 +46,7 @@ BOT_NAME = 'mercadolivre'
 SPIDER_MODULES = ['mercadolivre.spiders']
 NEWSPIDER_MODULE = 'mercadolivre.spiders'
 
-USER_AGENT = 'USER_AGENT'
+USER_AGENT = 'MY_USER_AGENT'
 
 ROBOTSTXT_OBEY = False
 
